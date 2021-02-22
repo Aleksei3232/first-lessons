@@ -11,8 +11,7 @@ int main()
 
 void divider(int N, int div)
 {
-
-    if (N <= div){
+    if (N == div){
         printf("%d \n", div);
         return;
     }
@@ -21,8 +20,7 @@ void divider(int N, int div)
         printf("%d \n", div);
         return divider ( N / div, div);
     }
-
-    if (N % div > 0){
+    else { // N % div != 0
         return divider(N, ++div);
     }
 }
